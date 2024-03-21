@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Aswin's Calculator!</h1>
+    <p></p><br><br>
+</div>
+
+<body>
+
+<div class="calculator" >
+    <input class="input" id="num1" type="text" placeholder="Num1">
+    <input class="input" id="num2" type="text" placeholder="Num2">
+    <input class="input" id="result" type="text" placeholder="Result"><br><br>
+
+    <button class="butt" onclick="test()">+</button>
+    <button class="butt" onclick="test1()">-</button>
+    <button class="butt" onclick="test2()">*</button>
+    <button class="butt" onclick="test3()">/</button>
+    <button class="butt" onclick="test4()">^</button><br>
+
+    <p  class="message"id="message"></p>
+    
+ </div>
+
+
+    <script>
+        function test(){
+
+ 
+            var val1= document.getElementById("num1").value
+            var val2= document.getElementById("num2").value
+
+            var val3=parseInt(val1)+parseInt(val2)
+            document.getElementById("result").value = val3
+            console.log(val3)
+        }
+
+        function test1(){
+
+ 
+        var val1= document.getElementById("num1").value
+        var val2= document.getElementById("num2").value
+
+        var val3=parseInt(val1)-parseInt(val2)
+        document.getElementById("result").value = val3
+        console.log(val3)
+        }
+
+
+        function test2(){
+
+        
+        var val1= document.getElementById("num1").value
+        var val2= document.getElementById("num2").value
+
+        var val3=parseInt(val1)*parseInt(val2)
+        document.getElementById("result").value = val3
+        console.log(val3)
+        }
+
+
+        function test3(){
+
+        
+        var val1= document.getElementById("num1").value
+        var val2= document.getElementById("num2").value
+
+        var val3=parseInt(val1)/parseInt(val2)
+        document.getElementById("result").value = " "
+        console.log(val3)
+        
+        if(val3=="Infinity"){
+            document.getElementById("message").innerHTML="You can not divide anything with Zero"
+        }
+
+
+        }
+
+        function test4(){
+
+        
+        var val1= document.getElementById("num1").value
+        var val2= document.getElementById("num2").value
+
+        var val3=parseInt(val1)**parseInt(val2)
+        document.getElementById("result").value = val3
+        console.log(val3)
+        }
+
+
+
+        
+    </script>
+
+
+
+    
+</body>
